@@ -24,30 +24,3 @@ export default props => {
         </div>
     )
 }
-
-    
-    
-
-
-    
-
-
-    /* <div className="row ">        
-            <div className="col pr-1">
-                <h3><span className="badge badge-primary">{props.value}</span></h3>
-            </div>
-            
-            <div className="col">
-            
-                <div className="row">
-                    <div >
-                        <h5><span>Ganhas</span></h5>
-                    </div>
-                    <div className="row" >
-                        <small>R$ 20.000,00</small>
-                    </div>
-                </div>   
-            
-            </div>
-        
-    </div> */
