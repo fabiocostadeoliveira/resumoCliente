@@ -1,0 +1,17 @@
+.container {
+    margin-left: -10px;
+    margin-top: 2px;
+}
+
+.badge-detail {
+    display: flex;
+}
+
+
+.badge-detail.titles {
+    display: flex;
+}
+
+.sub-title {
+    margin-top: -10px;
+}
