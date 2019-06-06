@@ -1,11 +1,13 @@
-.container {
+.badge-detail {
     margin-left: -10px;
     margin-top: 2px;
 }
 
+/*
 .badge-detail {
     display: flex;
 }
+*/
 
 
 .badge-detail.titles {

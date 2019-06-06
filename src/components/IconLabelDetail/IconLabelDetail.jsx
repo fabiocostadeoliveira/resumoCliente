@@ -9,7 +9,7 @@ export default props => {
     
     if (props.subtitle){
         subTitle = <h6 className="sub-title"> <small>{props.subtitle}</small></h6>
-        detailClassName = 'container'
+        detailClassName = 'container icon-label-detail'
     }
     
     return(
