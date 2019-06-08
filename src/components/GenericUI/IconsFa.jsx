@@ -5,5 +5,18 @@ import { faCheckSquare,
           faPhone,
           faEnvelope,
           faUser,
-          faUserCircle } from '@fortawesome/free-solid-svg-icons'
-library.add(fab, faCheckSquare, faCoffee, faPhone, faEnvelope,faUser,faUserCircle)
+          faUserCircle,
+          faMapPin,
+          faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+
+
+     
+library.add(fab,
+     faCheckSquare,
+     faCoffee,
+     faPhone,
+     faEnvelope,
+     faUser,
+     faUserCircle,
+     faMapPin,
+     faMapMarkerAlt)

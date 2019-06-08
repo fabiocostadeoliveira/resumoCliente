@@ -20,11 +20,16 @@ export default class ProfileBoard extends Component {
 
     constructor(props){
         super(props)        
-        this.componentDidMount = this.componentDidMount.bind(this)   
+        this.componentDidMount = this.componentDidMount.bind(this)
+        //this.state = props
     }
 
     componentDidMount(){
-        //fazer request       
+        //fazer request   
+        if (this.props === {})    {
+            console.log('aaaaaaaaaaaaaaaaaaaaaa')
+        }
+            
     }
     
     render(){
@@ -37,7 +42,7 @@ export default class ProfileBoard extends Component {
                             <FontAwesomeIcon icon="user-circle" size="4x" color="gray"/>                                                                    
                         </div>
                         <div className="user-data-company">
-                            <span>{this.state.nameClient}</span>
+                            <span>{this.props.nameClient}</span>
                             <span>{this.state.nameCompany}</span>
                             <span>{this.state.status}</span>                        
                         </div>

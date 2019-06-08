@@ -4,13 +4,7 @@ import './Board.css'
 
 export default class Board extends Component {
     
-    constructor(props){
-        super(props)
-        
-    }
-    
-    render(){    
-        
+    render(){            
         let additionalClassName = ''
         additionalClassName = this.props.className || ''
 
