@@ -16,6 +16,7 @@ export default class OpportunityClient extends Component {
     }
     
     render(){        
+
         const elBadgeDetail = this.state.data.map(this.funcBadgeDetail)
 
         return (

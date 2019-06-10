@@ -15,7 +15,6 @@ export default class LimitCredit extends Component {
     }    
     
     render(){
-        console.log('props a',this.state)
         const limitGranted = this.state.limitGranted || limitDefault
         const limitAvailable = this.state.limitAvailable || limitDefault
         
