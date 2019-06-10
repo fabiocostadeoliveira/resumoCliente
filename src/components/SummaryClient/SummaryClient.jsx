@@ -51,24 +51,34 @@ export default class SummaryClient extends Component {
         ]  
 
         return (
-            <div className="container">
-                        <div className="row">
-                                <ProfileBoard {...dataDefault}></ProfileBoard>
-                                <AddressMaps/>                                
-                                <OpportunityClient data={listOpportunity}></OpportunityClient>                                    
-                        </div>
-                        <div className="row">
-                                <LimitCredit {...listLimitCredit}/>                                
-                                <FinancialSecurities data={listFinancialSecurities} />
-                                <SalesChart data={listTotalSales}/>
-                        </div>
-
-                        <div className="row">
-                                <Board className="col"></Board>
-                                <Board className="col"></Board>
-                                <Board className="col"></Board>                        
-                        </div>
-                </div>            
+            <div className="container ml-0 mr-0">
+                
+                <div className="row ml-0 mr-0" >
+                    <div className="col-8 ml-0 pl-0">
+                        
+                            <div className="row">
+                                <div className="col">
+                                    <ProfileBoard {...dataDefault}></ProfileBoard>
+                                    <AddressMaps/>                                
+                                    <OpportunityClient data={listOpportunity}></OpportunityClient>                                    
+                                
+                                </div>
+                                                           
+                                <div className="col">
+                                    <LimitCredit {...listLimitCredit}/>                                
+                                    <FinancialSecurities data={listFinancialSecurities} />
+                                    <SalesChart data={listTotalSales}/>
+                                </div>               
+                            </div>
+                    </div>
+                    
+                    <div className="col-4">
+                        fasdfasdfasldfajsd flaksdjf lasdkjfa sdfa
+                        sdfaskdlf asjdlfaskd fas
+                        dfasdkflas dfjalsd fasdfasdfasldfajsdasdfasdf
+                    </div>
+                </div>
+            </div>            
         )
     }
 }

@@ -16,8 +16,9 @@
     margin-left: 10px;
     margin-top: 5px;
     padding: 13px;    
-    box-shadow: .05vw 1vw 20px #ebecec;    
     box-shadow: .05vw 1vw 35px #0d0e0e;    
+    box-shadow: .05vw 1vw 20px #ebecec;    
+    box-shadow: .05vw 1vw 20px #a3aaaa; 
     border: none;
     border-top: none;
     //background-color: green;
