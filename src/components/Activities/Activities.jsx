@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
 import './Activities.css'
 import BadgeDetail from '../BadgeDatail/BadgeDetail'
-//import LabelDetail from '../LabelDetail/LabelDetail';
-
+import Timeline from '../Timeline/TimelIne'
+import TimelineItem from '../Timeline/TimelineItem'
 
 
 export default class Activities extends Component {
@@ -24,7 +24,26 @@ export default class Activities extends Component {
                     <BadgeDetail title="Em atraso" value="0" color="danger"/>
                     <BadgeDetail title="Em andamento" value="0" color="primary"/>
                     <BadgeDetail title="Previstas" value="0" color="warning"/>
-                    <BadgeDetail title="Concluidas" value="0" color="success"/>
+                    <BadgeDetail title="Concluidas" value="0" color="success"/>                    
+                </div>
+                <div>
+                    <Timeline>
+                        
+                        
+                        <div>
+                        </div>
+
+                        <div>
+                        </div>
+                        <div>
+                        
+                        </div>
+                        <div>
+                        
+                        </div>
+
+
+                    </Timeline>                
                 </div>
             </div>
         )

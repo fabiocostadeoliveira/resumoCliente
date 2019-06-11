@@ -7,6 +7,7 @@ import LimitCredit from '../LimitCredit/LimitCredit'
 import FinancialSecurities from '../FinancialSecurities/FinancialSecurities'
 import SalesChart from '../SalesChart/SalesChart'
 import Activities from '../Activities/Activities'
+import Timeline from '../Timeline/TimelIne'
 
 
 
