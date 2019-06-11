@@ -18,20 +18,7 @@ const dataDefault = {
 export default class ProfileBoard extends Component {
     state = {...dataDefault}
 
-    constructor(props){
-        super(props)        
-        this.componentDidMount = this.componentDidMount.bind(this)
-        //this.state = props
-    }
 
-    componentDidMount(){
-        //fazer request   
-        if (this.props === {})    {
-            console.log('aaaaaaaaaaaaaaaaaaaaaa')
-        }
-            
-    }
-    
     render(){
         return (
             <div className="container-board">

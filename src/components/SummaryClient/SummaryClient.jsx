@@ -6,6 +6,7 @@ import OpportunityClient from '../OpportunityClient/OpportunityClient'
 import LimitCredit from '../LimitCredit/LimitCredit'
 import FinancialSecurities from '../FinancialSecurities/FinancialSecurities'
 import SalesChart from '../SalesChart/SalesChart'
+import Activities from '../Activities/Activities'
 
 
 
@@ -51,34 +52,25 @@ export default class SummaryClient extends Component {
         ]  
 
         return (
-            <div className="container ml-0 mr-0">
+            
+
+            <div className="d-flex flex-row">
                 
-                <div className="row ml-0 mr-0" >
-                    <div className="col-8 ml-0 pl-0">
-                        
-                            <div className="row">
-                                <div className="col">
-                                    <ProfileBoard {...dataDefault}></ProfileBoard>
-                                    <AddressMaps/>                                
-                                    <OpportunityClient data={listOpportunity}></OpportunityClient>                                    
-                                
-                                </div>
-                                                           
-                                <div className="col">
-                                    <LimitCredit {...listLimitCredit}/>                                
-                                    <FinancialSecurities data={listFinancialSecurities} />
-                                    <SalesChart data={listTotalSales}/>
-                                </div>               
-                            </div>
-                    </div>
-                    
-                    <div className="col-4">
-                        fasdfasdfasldfajsd flaksdjf lasdkjfa sdfa
-                        sdfaskdlf asjdlfaskd fas
-                        dfasdkflas dfjalsd fasdfasdfasldfajsdasdfasdf
+                <div className="col-6 pr-2">
+                    <div class="d-flex flex-wrap">
+                        <ProfileBoard {...dataDefault}></ProfileBoard>
+                        <AddressMaps/>                                
+                        <OpportunityClient data={listOpportunity}></OpportunityClient>                                    
+                        <LimitCredit {...listLimitCredit}/>                                
+                        <FinancialSecurities data={listFinancialSecurities} />
+                        <SalesChart data={listTotalSales}/>
                     </div>
                 </div>
-            </div>            
+
+                <div className="col-6 pl-2">
+                    <Activities/>
+                </div>
+            </div>
         )
     }
 }
