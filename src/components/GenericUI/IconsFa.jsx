@@ -7,7 +7,10 @@ import { faCheckSquare,
           faUser,
           faUserCircle,
           faMapPin,
-          faMapMarkerAlt } from '@fortawesome/free-solid-svg-icons'
+          faMapMarkerAlt,
+          faPeopleCarry,
+          faHands,
+          faHandshake } from '@fortawesome/free-solid-svg-icons'
 
 
      
@@ -19,4 +22,7 @@ library.add(fab,
      faUser,
      faUserCircle,
      faMapPin,
-     faMapMarkerAlt)
+     faMapMarkerAlt,
+     faPeopleCarry,
+     faHands,
+     faHandshake)

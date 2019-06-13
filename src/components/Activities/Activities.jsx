@@ -3,6 +3,7 @@ import './Activities.css'
 import BadgeDetail from '../BadgeDatail/BadgeDetail'
 import Timeline from '../Timeline/TimelIne'
 import TimelineItem from '../Timeline/TimelineItem'
+import IconLabelDetail from '../IconLabelDetail/IconLabelDetail'
 
 
 export default class Activities extends Component {
@@ -29,19 +30,28 @@ export default class Activities extends Component {
                 <div>
                     <Timeline>
                         
+                        <TimelineItem title="Novos" colorIcon="blue" >
+                            <IconLabelDetail title="a11111" subtitle="aaaaaa" icon={{icon:"coffee"}}/>
+                            <IconLabelDetail title="a22222" subtitle="aaaaaa" icon={{icon:"user", color:"red"}}/>
+                            <IconLabelDetail title="a33333" subtitle="aaaaaa" icon={{icon:"people-carry"}}/>
+                            <IconLabelDetail title="a44444" subtitle="aaaaaa" icon={{icon:"envelope"}}/>
+                        </TimelineItem>
                         
-                        <div>
-                        </div>
+                        <TimelineItem title="Previsto" colorIcon="gold" >
+                            <IconLabelDetail title="bbbbbbbbb" subtitle="bbbbbbbb" icon={{icon:"hands"}}/>
+                            <IconLabelDetail title="bbbbbbbbb" subtitle="bbbbbbbb" icon={{icon:"handshake"}}/>                        
+                        </TimelineItem>
+                        
+                        <TimelineItem title="Atrasados" colorIcon="tomato" >
+                            <IconLabelDetail title="cccccccccccc" subtitle="ccccccc" icon={{icon:"handshake"}}/>
+                        </TimelineItem>
 
-                        <div>
-                        </div>
-                        <div>
-                        
-                        </div>
-                        <div>
-                        
-                        </div>
-
+                        <TimelineItem title="Concluidos" colorIcon="FORESTGREEN" >
+                            <IconLabelDetail title="eeeeeeeeee" subtitle="eeeeeeeeeeee" icon={{icon:"handshake"}}/>
+                            <IconLabelDetail title="eeeeeeeeee" subtitle="eeeeeeeeeeee" icon={{icon:"handshake"}}/>
+                            <IconLabelDetail title="eeeeeeeeee" subtitle="eeeeeeeeeeee" icon={{icon:"handshake"}}/>
+                            <IconLabelDetail title="eeeeeeeeee" subtitle="eeeeeeeeeeee" icon={{icon:"handshake"}}/>
+                        </TimelineItem>
 
                     </Timeline>                
                 </div>

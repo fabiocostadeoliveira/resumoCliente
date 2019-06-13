@@ -7,7 +7,7 @@ import LimitCredit from '../LimitCredit/LimitCredit'
 import FinancialSecurities from '../FinancialSecurities/FinancialSecurities'
 import SalesChart from '../SalesChart/SalesChart'
 import Activities from '../Activities/Activities'
-import Timeline from '../Timeline/TimelIne'
+
 
 
 
@@ -58,7 +58,7 @@ export default class SummaryClient extends Component {
             <div className="d-flex flex-row">
                 
                 <div className="col-6 pr-2">
-                    <div class="d-flex flex-wrap">
+                    <div className="d-flex flex-wrap">
                         <ProfileBoard {...dataDefault}></ProfileBoard>
                         <AddressMaps/>                                
                         <OpportunityClient data={listOpportunity}></OpportunityClient>                                    
