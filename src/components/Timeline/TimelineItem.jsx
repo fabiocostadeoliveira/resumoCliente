@@ -10,12 +10,14 @@ export default class TimelineItem extends Component{
     }
 
     render(){
-        let styleTimePoint = {'backgroundColor':this.props.colorIcon,'borderColor':this.props.colorIcon, 'border':`3px solid ${this.props.colorIcon}`}
+        let styleTimePoint = {'backgroundColor':this.props.colorIcon,
+                              'borderColor':this.props.colorIcon,
+                              'border':`3px solid ${this.props.colorIcon}`}
         return (
             <div>
             <div className="circle-item-timeline" style={{...styleTimePoint}}/>
                 <li>
-                    <h6>{this.props.title}</h6>
+                    <h6 style={{paddingLeft:'5px'}}>{this.props.title}</h6>
                     {chindrenWithProps(this.props)}
                 </li>
             </div>

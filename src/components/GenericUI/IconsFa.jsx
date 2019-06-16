@@ -10,7 +10,8 @@ import { faCheckSquare,
           faMapMarkerAlt,
           faPeopleCarry,
           faHands,
-          faHandshake } from '@fortawesome/free-solid-svg-icons'
+          faHandshake,
+          faCalendar } from '@fortawesome/free-solid-svg-icons'
 
 
      
@@ -25,4 +26,5 @@ library.add(fab,
      faMapMarkerAlt,
      faPeopleCarry,
      faHands,
-     faHandshake)
+     faHandshake,
+     faCalendar)

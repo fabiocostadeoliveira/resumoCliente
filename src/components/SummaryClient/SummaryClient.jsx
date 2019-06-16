@@ -8,10 +8,6 @@ import FinancialSecurities from '../FinancialSecurities/FinancialSecurities'
 import SalesChart from '../SalesChart/SalesChart'
 import Activities from '../Activities/Activities'
 
-
-
-
-
 const dataDefault = {
     nameClient : 'dataUninformed',
     nameCompany: 'dataUninformed',
@@ -52,8 +48,19 @@ export default class SummaryClient extends Component {
             {product: 'Aveia', totalSale: 10000.00},
         ]  
 
+        const listActivities = [
+            {title: 'Reuniao', description:'Reuniao com gestores',status:'Em atraso', typeActivity:'meeting'},
+            {title: 'Contato Clientes', description:'Clientes do projeto',status:'Em andamento', typeActivity:'phonecall'},
+            {title: 'Café com coordenadores', description:'Coordenação do projeto Xy',status:'Concluida', typeActivity:'coffee'},
+            {title: 'Ligação cliente', description:'falar com João',status:'Concluida', typeActivity:'phonecall'},
+            {title: 'Reserva de sala', description:'sala com projetor',status:'Concluida', typeActivity:'scheduling'},
+            {title: 'Email orçamento', description:'Maria da Silva',status:'Concluida', typeActivity:'email'},
+            {title: 'Ligação', description:'José Carlos',status:'Concluida', typeActivity:'phonecall'},
+            {title: 'Desafio Frontend', description:'Entregar projeto',status:'Em andamento', typeActivity:'scheduling'},
+            {title: 'Ligação Juridico', description:'Revisar contrato de compra',status:'Prevista', typeActivity:'scheduling'}
+        ]
+
         return (
-            
 
             <div className="d-flex flex-row">
                 
@@ -69,7 +76,7 @@ export default class SummaryClient extends Component {
                 </div>
 
                 <div className="col-6 pl-2">
-                    <Activities/>
+                    <Activities data={listActivities}/>
                 </div>
             </div>
         )
