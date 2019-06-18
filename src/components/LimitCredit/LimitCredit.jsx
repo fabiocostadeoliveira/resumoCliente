@@ -12,7 +12,13 @@ export default class LimitCredit extends Component {
     constructor(props){
         super(props)        
         this.state = {...props}
-    }    
+    }
+    
+    componentWillReceiveProps(nextProps){
+        if(nextProps!==this.props){
+            this.setState(nextProps)
+        }   
+    }
     
     render(){
         const limitGranted = this.state.limitGranted || limitDefault

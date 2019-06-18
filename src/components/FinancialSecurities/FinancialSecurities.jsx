@@ -11,6 +11,12 @@ export default class FinancialSecurities extends Component {
         this.state = {'data':props.data}
     }
 
+    componentWillReceiveProps(nextProps){
+        if(nextProps!==this.props){
+            this.setState(nextProps)
+        }   
+    }
+
     mountBadgeDetail(obj,idx){            
         return  <BadgeDetail key={idx} title={obj.title} subtitle={obj.subtitle} value={obj.value} color={obj.color}/>
     }

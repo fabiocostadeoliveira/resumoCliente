@@ -31,6 +31,12 @@ export default class Activities extends Component {
         this.handleChange = this.handleChange.bind(this)
     }
 
+    componentWillReceiveProps(nextProps){
+        if(nextProps!==this.props){
+            this.setState(nextProps)
+        }   
+    }
+    
     groupByStatus(data){
         let result = data.reduce(function (r, a) {
             r[a.status] = r[a.status] || [];

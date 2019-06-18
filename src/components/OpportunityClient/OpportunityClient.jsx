@@ -8,7 +8,13 @@ export default class OpportunityClient extends Component {
     constructor(props){
         super(props)
         this.funcBadgeDetail = this.funcBadgeDetail.bind(this)
-        this.state = {'data':props.data}
+        this.state = {...props}
+    }
+
+    componentWillReceiveProps(nextProps){
+        if(nextProps!==this.props){
+            this.setState(nextProps)
+        }   
     }
 
     funcBadgeDetail(obj,idx){            

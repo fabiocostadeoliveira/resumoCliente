@@ -13,6 +13,12 @@ export default class SalesChart extends Component {
         this.state = {...props}
     }
 
+    componentWillReceiveProps(nextProps){
+        if(nextProps!==this.props){
+            this.setState(nextProps)
+        }   
+    }
+
     transformDataToDataChart(data){        
         return {title:data.product , value:data.totalSale, color:''}
     }
@@ -58,6 +64,7 @@ export default class SalesChart extends Component {
                 style={{height:'90%'}}
                 data={listChart}                
                 animate
+                animationDuration={1500}
                 label={formatLabelChart}
                 labelStyle={{
                     fontSize: '5px',
