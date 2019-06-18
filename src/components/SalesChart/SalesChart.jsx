@@ -10,13 +10,7 @@ export default class SalesChart extends Component {
         this.transformDataToDataChart = this.transformDataToDataChart.bind(this)
         this.orderData = this.orderData.bind(this)
         this.agruparValores = this.compileData.bind(this)
-        this.state = {...props}
-    }
-
-    componentWillReceiveProps(nextProps){
-        if(nextProps!==this.props){
-            this.setState(nextProps)
-        }   
+        //this.state = {...props}
     }
 
     transformDataToDataChart(data){        
@@ -48,7 +42,7 @@ export default class SalesChart extends Component {
     }
 
     render (){
-        let list = this.state.data.map(this.transformDataToDataChart)
+        let list = this.props.data ? this.props.data.map(this.transformDataToDataChart) : []
         let listOrdered = list.sort(this.orderData)
         const listChart = this.compileData(listOrdered)
         const formatLabelChart = ({ data, dataIndex }) => {
@@ -64,7 +58,7 @@ export default class SalesChart extends Component {
                 style={{height:'90%'}}
                 data={listChart}                
                 animate
-                animationDuration={1500}
+                animationDuration={1000}
                 label={formatLabelChart}
                 labelStyle={{
                     fontSize: '5px',

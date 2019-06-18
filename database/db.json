@@ -1,9 +1,18 @@
 {
     "summaryClient":[{
         "id":1,
-        "name": "Jose da Silva",
-        "phone": "9999-8888",
-        "email":"josesilva@gmail.com",
+        "profile":{
+            "nameClient": "Jose da Silva",
+            "nameCompany": "Acme",
+            "phone": "(45) 9999-8888",
+            "typePhone": "Celular",
+            "email":"josesilva@gmail.com",
+            "typeEmail": "Particular",
+            "address": "Av.Brasil",
+            "addressNumber":1234,
+            "lat":-24.95,
+            "lng":-53.43
+        },
         "opportunities": [
             {
                 "title": "Descartadas",

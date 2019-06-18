@@ -8,13 +8,6 @@ export default class FinancialSecurities extends Component {
     constructor(props){
         super(props)
         this.mountBadgeDetail = this.mountBadgeDetail.bind(this)
-        this.state = {'data':props.data}
-    }
-
-    componentWillReceiveProps(nextProps){
-        if(nextProps!==this.props){
-            this.setState(nextProps)
-        }   
     }
 
     mountBadgeDetail(obj,idx){            
@@ -22,7 +15,7 @@ export default class FinancialSecurities extends Component {
     }
 
     render(){
-        let elBadgeDetail = this.state.data || []
+        let elBadgeDetail = this.props.data || []
         elBadgeDetail = elBadgeDetail.map(this.mountBadgeDetail)
         return (
             <div className="container-board">               
