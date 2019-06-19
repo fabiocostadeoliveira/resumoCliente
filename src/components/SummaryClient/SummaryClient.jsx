@@ -40,7 +40,11 @@ export default class SummaryClient extends Component {
         let limitCredit = this.state.limitCredit || {}
         let listActivities = this.state.activities || []
         let profile = this.state.profile || {}
-
+        let address = profile.address || {}
+        let latitude = address.lat ? address.lat.toFixed(2) : 0
+        let longitude = address.lng ? address.lng.toFixed(2) : 0
+        let objCenter = {lat:latitude, lng :longitude}
+        console.log('dentro do summary prifile', objCenter)
         return (
             
             <div className="d-flex flex-row">
@@ -48,7 +52,7 @@ export default class SummaryClient extends Component {
                 <div className="col-6 pr-2">
                     <div className="d-flex flex-wrap">
                         <ProfileBoard {...profile}></ProfileBoard>
-                        <AddressMaps/>                                
+                        <AddressMaps data={address} center={objCenter}/>                                
                         <OpportunityClient data={listOpportunity}></OpportunityClient>                                    
                         <LimitCredit {...limitCredit}/>                                
                         <FinancialSecurities data={listFinancialSecurities} />

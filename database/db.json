@@ -8,10 +8,14 @@
             "typePhone": "Celular",
             "email":"josesilva@gmail.com",
             "typeEmail": "Particular",
-            "address": "Av.Brasil",
-            "addressNumber":1234,
-            "lat":-24.95,
-            "lng":-53.43
+            "status":"Ativo",
+            "address": {
+                "typeAddress":"Casa",
+                "nameStreet": "Av.Brasil",
+                "addressNumber":1234,
+                "lat":-24.995854,
+                "lng":-53.460507
+            } 
         },
         "opportunities": [
             {
