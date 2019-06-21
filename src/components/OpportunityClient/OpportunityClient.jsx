@@ -6,7 +6,12 @@ import './OpportunityClient.css'
 export default props => {
     let data = props.data || []
     let elementsBadgeDetail = (obj,idx) => {            
-        return  <BadgeDetail key={idx} title={obj.title} subtitle={obj.subtitle} value={obj.value} color={obj.color}/>
+        return  <BadgeDetail 
+                    key={idx}
+                    title={obj.title}
+                    subtitle={obj.subtitle}
+                    value={obj.value}
+                    color={obj.color}/>
     }
     
     return (

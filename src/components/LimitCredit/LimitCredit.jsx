@@ -7,33 +7,27 @@ const limitDefault = {
     description:'  Sem Informação  ',
     color:'secondary'
 }
-export default class LimitCredit extends Component {
+export default props => {
 
-    constructor(props){
-        super(props)        
-    }
+    const limitGranted = props.limitGranted || limitDefault
+    const limitAvailable = props.limitAvailable || limitDefault
     
-    render(){
-        const limitGranted = this.props.limitGranted || limitDefault
-        const limitAvailable = this.props.limitAvailable || limitDefault
-        
-        return (
-            <div className="container-board">
+    return (
+        <div className="container-board">
+            <div>
                 <div>
-                    <div>
-                        <span>Limite de crédito</span>
-                    </div>
-                    <div>
-                        <LabelDetail title={limitGranted.value}
-                                     subtitle={limitGranted.description}
-                                     color={limitGranted.color}/>
-                        
-                        <LabelDetail title={limitAvailable.value}
-                                     subtitle={limitAvailable.description}
-                                     color={limitAvailable.color}/>
-                    </div>                    
+                    <span>Limite de crédito</span>
                 </div>
+                <div>
+                    <LabelDetail title={limitGranted.value}
+                                    subtitle={limitGranted.description}
+                                    color={limitGranted.color}/>
+                    
+                    <LabelDetail title={limitAvailable.value}
+                                    subtitle={limitAvailable.description}
+                                    color={limitAvailable.color}/>
+                </div>                    
             </div>
-        )
-    }
+        </div>
+    )
 }
