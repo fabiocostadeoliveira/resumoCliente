@@ -1,9 +1,7 @@
 import React, { Component } from 'react'
-import GoogleMapReact from 'google-map-react'
 import IconLabelDetail from '../IconLabelDetail/IconLabelDetail'
 import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
 import './AddressMaps.css'
-
 
 const mapStyles = {
     width: '280px',
@@ -14,8 +12,6 @@ export class MapContainer extends Component {
 
     constructor(props){
         super(props)
-        this.state = {
-            stores: [{lat: this.props.data.lat, lng: this.props.data.lng}]}
     }
 
     render() {
@@ -27,21 +23,18 @@ export class MapContainer extends Component {
             <div className="address-gloogle-maps" >
                 <Map
                     google={this.props.google}
-                    zoom={13}
+                    zoom={14}
                     style={mapStyles}
                     containerStyle={{position: 'relative'}}
-                    initialCenter={{
-                    lat: this.props.center.lat, 
-                    lng: this.props.center.lng
-                    }}
-                    
-                >
-                <Marker name={'Current location'} />
+                    initialCenter={{lat: this.props.center.lat, lng: this.props.center.lng }}
+                    >
+                    <Marker title={this.props.data.typeAddress} />
                 </Map>
             </div>
             <IconLabelDetail 
                     title={`${this.props.data.nameStreet}, ${this.props.data.addressNumber}`}
                     subtitle={this.props.data.typeAddress}
+                    containerStyle={"mt-2"}
                     icon={{icon:"map-marker-alt"}}
                     />
         </div>

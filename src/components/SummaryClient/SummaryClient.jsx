@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import './SummaryClient.css'
 import Board from '../Board/Board'
 import ProfileBoard from '../ProfileBoard/ProfileBoard'
 import AddressMaps from '../AddressMaps/AddressMaps'
@@ -37,20 +38,18 @@ export default class SummaryClient extends Component {
         
         return (
             
-            <div className="d-flex flex-row">
+            <div className="containter-geral">
                 
-                <div className="col-6 pr-2">
-                    <div className="d-flex flex-wrap">
+                <div className="grid-boards pr-2">
                         <ProfileBoard {...profile}></ProfileBoard>
                         <AddressMaps data={address} center={objCenter}/>                                
                         <OpportunityClient data={listOpportunity}></OpportunityClient>                                    
                         <LimitCredit {...limitCredit}/>                                
                         <FinancialSecurities data={listFinancialSecurities} />
                         <SalesChart data={listTotalSales}/>
-                    </div>
                 </div>
 
-                <div className="col-6 pl-2">
+                <div className="pl-2">
                     <Activities data={listActivities}/>
                 </div>
             </div>

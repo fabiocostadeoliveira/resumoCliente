@@ -129,7 +129,7 @@ export default class Activities extends Component {
     render(){
         /** Totalizers **/
         let activitiesFromDB = this.groupByStatus(this.state.data) || []
-        objTotalizers.forEach( (item) => { return this.fillTotalizers(item,activitiesFromDB) })
+        objTotalizers.forEach( (item) => this.fillTotalizers(item,activitiesFromDB))
         let elmentsTotalizers = objTotalizers.map(this.makeTotalizers)
 
         /** Markes/Activities **/
@@ -149,7 +149,7 @@ export default class Activities extends Component {
                        style={{width:'inherit'}}
                        onChange={this.handleChange}/>
                 
-                <div className="activites-totalizer">
+                <div className="d-flex flex-row flex-wrap">
                     {elmentsTotalizers}
                 </div>
                 <div>
