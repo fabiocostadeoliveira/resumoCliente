@@ -4,24 +4,15 @@ import './TimelineItem.css'
 
 
 
-export default class TimelineItem extends Component{
-    constructor(props){
-        super(props)
-    }
-
-    render(){
-        let styleTimePoint = {'backgroundColor':this.props.colorIcon,
-                              'borderColor':this.props.colorIcon,
-                              'border':`3px solid ${this.props.colorIcon}`}
-        return (
-            <div>
-            <div className="circle-item-timeline" style={{...styleTimePoint}}/>
-                <li>
-                    <h6 style={{paddingLeft:'5px'}}>{this.props.title}</h6>
-                    {chindrenWithProps(this.props)}
-                </li>
-            </div>
-        )
-    }
-
+export default props => {
+    let typeColor = props.typeColor ? 'border-' + props.typeColor  : ''
+    return (
+        <div>
+        <div className={`circle-item-timeline ${typeColor}`} />
+            <li>
+                <h6 style={{paddingLeft:'5px', marginTop:'13px'}}>{props.title}</h6>
+                {chindrenWithProps(props)}
+            </li>
+        </div>
+    )
 }

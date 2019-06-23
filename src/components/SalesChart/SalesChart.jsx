@@ -45,7 +45,7 @@ export default props => {
         
     return(
         <div className="container-board">
-            <h6><span>Mais vendidos</span></h6>
+            <span className="title-board">Mais vendidos</span>
             <ReactMinimalPieChart
             style={{height:'90%'}}
             data={listChart}                

@@ -7,3 +7,21 @@ export function chindrenWithProps(props){
         })
     })    
 }
+
+export function currencyFormat(value,stringToFloat=false){
+    let valueAux = value
+    let ret = ''
+    console.log('typeOf currency',typeof(parseFloat(value)))
+    try {
+        if ((stringToFloat) && (typeof(valueAux) != Number)) {
+            valueAux = parseFloat(valueAux)
+        }    
+        if (isNaN(valueAux)) throw "Impossivel converter valor " + value
+        ret = valueAux.toLocaleString("pt-BR",{style:"currency", currency:"BRL"})
+    } catch (error) {
+        console.log('Nao foi possivel converter',value,'para Float')        
+        console.log(error)
+        ret = 'Convertion error'
+    }
+    return ret
+}

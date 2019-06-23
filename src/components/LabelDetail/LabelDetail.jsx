@@ -2,8 +2,7 @@ import React from 'react'
 import './LabelDetail.css'
 
 export default props => {    
-    let textColor = ''
-    textColor = props.color ? 'text-' + props.color : ''
+    let textColor = props.typeColor ? 'text-' + props.typeColor : ''
     return(
         <div>       
             <div className="row mb-n1 pb-0 ml-1">

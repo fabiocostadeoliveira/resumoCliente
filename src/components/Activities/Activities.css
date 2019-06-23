@@ -23,3 +23,8 @@ ul.timeline > li {
     margin: 20px 0;
     padding-left: 20px;
 }
+
+.container-IconLabelDetail{
+    padding: 0;
+    margin: 0;
+}

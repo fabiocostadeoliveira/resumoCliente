@@ -7,17 +7,7 @@ import LimitCredit from '../LimitCredit/LimitCredit'
 import FinancialSecurities from '../FinancialSecurities/FinancialSecurities'
 import SalesChart from '../SalesChart/SalesChart'
 import Activities from '../Activities/Activities'
-import SummaryClientService, { summaryQuery, activitiesQuery } from '../../services/SummaryClientService'
-
-const dataDefault = {
-    nameClient : 'dataUninformed',
-    nameCompany: 'dataUninformed',
-    status: 'dataUninformed',
-    phone: 'dataUninformed',
-    typePhone: 'dataUninformed',
-    email: 'dataUninformed',
-    typeEmail: 'dataUninformed'
-}  
+import { summaryQuery, activitiesQuery } from '../../services/SummaryClientService'
 
 export default class SummaryClient extends Component {
     constructor(props){
@@ -44,7 +34,7 @@ export default class SummaryClient extends Component {
         let latitude = address.lat ? address.lat.toFixed(2) : 0
         let longitude = address.lng ? address.lng.toFixed(2) : 0
         let objCenter = {lat:latitude, lng :longitude}
-        console.log('dentro do summary prifile', objCenter)
+        
         return (
             
             <div className="d-flex flex-row">

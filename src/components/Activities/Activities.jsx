@@ -7,10 +7,10 @@ import IconLabelDetail from '../IconLabelDetail/IconLabelDetail'
 
 
 const cfgStatusActivity = {
-    late: {label: "Em atraso", markerLabel:"Atividades em atraso", color: "#dc3545", order:1}, 
-    completed: {label: "Concluida", markerLabel:"Atividades concluidas", color: "#28a745", order:4  },
-    progress: {label: "Em andamento", markerLabel:"Atividades em andamento",color: "#007bff", order:2 },
-    planned: { label: "Prevista", markerLabel:"Atividades previstas",color: "#ffc107", order:3},
+    late: {label: "Em atraso", markerLabel:"Atividades em atraso", typeColor: "danger", order:1}, 
+    completed: {label: "Concluida", markerLabel:"Atividades concluidas", typeColor: "success", order:4  },
+    progress: {label: "Em andamento", markerLabel:"Atividades em andamento",typeColor: "primary", order:2 },
+    planned: { label: "Prevista", markerLabel:"Atividades previstas",typeColor: "warning", order:3},
 }
 
 const iconByTypeActivity = {
@@ -34,15 +34,13 @@ export default class Activities extends Component {
     constructor(props){
         super(props)
         this.state = {...props}
-        this.groupByStatus = this.groupByStatus.bind(this)
-        //this.countActivity = this.countActivity.bind(this)
-        //this.makeMarker = this.makeMarker.bind(this)
-        this.handleChange = this.handleChange.bind(this)
-        this.makeTotalizers = this.makeTotalizers.bind(this)
-        this.fillTotalizers = this.fillTotalizers.bind(this)
-        this.makeMarkerTeste = this.makeMarkerTeste.bind(this)
+        this.groupByStatus       = this.groupByStatus.bind(this)
+        this.handleChange        = this.handleChange.bind(this)
+        this.makeTotalizers      = this.makeTotalizers.bind(this)
+        this.fillTotalizers      = this.fillTotalizers.bind(this)
+        this.makeMarker          = this.makeMarker.bind(this)
         this.putOrderIntoMarkers = this.putOrderIntoMarkers.bind(this)
-        this.sortActivities = this.sortActivities.bind(this)
+        this.sortActivities      = this.sortActivities.bind(this)
     }
 
     componentWillReceiveProps(nextProps){
@@ -60,19 +58,22 @@ export default class Activities extends Component {
         return result
     }
 
-    makeMarkerTeste(data,idxTimeline){
+    makeMarker(data,idxTimeline){
         let cfg = cfgStatusActivity[data[0]]
         let arrayActivities = data[1]
         return (
             <TimelineItem key={idxTimeline} 
-                          title={cfg.label} 
-                          colorIcon={cfg.color}
+                          title={cfg.markerLabel} 
+                          typeColor={cfg.typeColor}
                  >
                 {arrayActivities.map( (a, idxIconLabelDetail) => {
-                    return <IconLabelDetail key={idxIconLabelDetail} 
-                                            title={a.title} 
-                                            subtitle={a.description} 
-                                            icon={{icon:iconByTypeActivity[a.typeActivity] }}/>
+                    return <IconLabelDetail 
+                                key={idxIconLabelDetail} 
+                                title={a.title} 
+                                subtitle={a.description}
+                                containerStyle={'mb-1 mt-1 ml-3'} 
+                                icon={{icon:iconByTypeActivity[a.typeActivity] }}/>
+                           
                 } )}
             </TimelineItem>
         )
@@ -101,7 +102,7 @@ export default class Activities extends Component {
             <BadgeDetail key={idx} 
                          title={data.label}
                          value={data.value}
-                         color={data.color}/>
+                         typeColor={data.color}/>
         )
     }
 
@@ -132,14 +133,16 @@ export default class Activities extends Component {
         let elmentsTotalizers = objTotalizers.map(this.makeTotalizers)
 
         /** Markes/Activities **/
-        let arrayActivities = Object.entries(activitiesFromDB).map(this.putOrderIntoMarkers)
-        let elActivities = arrayActivities.map(this.makeMarkerTeste)
+        let arrayActivities = Object.entries(activitiesFromDB)
+                                .map(this.putOrderIntoMarkers)
+                                .sort(this.sortActivities)
+        let elActivities = arrayActivities.map(this.makeMarker)
         let allItensOrdered = elActivities.filter( (i) => i != null)
 
         return (
             <div className="container-board activities">
                 <div>
-                    <h6><span>Atividades</span></h6>
+                    <span className="title-board">Atividades</span>
                 </div>
                 <input type="search"  
                        placeholder="Pesquisar..." 

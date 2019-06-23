@@ -7,7 +7,7 @@ export default props => {
 
     return (
         <div className="container-board">
-            <h6><span>Informações Gerais</span></h6>
+            <span className="title-board">Informações Gerais</span>
             <div>
                 <div className="user-info">                        
                     <div className="icon">

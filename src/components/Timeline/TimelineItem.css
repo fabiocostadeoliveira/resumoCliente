@@ -12,3 +12,20 @@
     background-blend-mode: color;
     z-index: 500;
 }
+
+
+.border-primary {
+    background-color: var(--primary)
+}
+
+.border-success {
+    background-color: var(--success)
+}
+
+.border-warning {
+    background-color: var(--warning)
+}
+
+.border-danger {
+    background-color: var(--danger)
+}

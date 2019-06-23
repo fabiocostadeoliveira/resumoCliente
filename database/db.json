@@ -22,25 +22,25 @@
                 "title": "Descartadas",
                 "subtitle": "-",
                 "value": "0",
-                "color": "secondary"
+                "status": "discarded"
             },
             {
                 "title": "Ganhas",
                 "subtitle": "20.000,00",
                 "value": "4",
-                "color": "success"
+                "status": "won"
             },
             {
                 "title": "Perdidas",
                 "subtitle": "4.000,00",
                 "value": "1",
-                "color": "danger"
+                "status":"lost"
             },
             {
                 "title": "Abertas",
                 "subtitle": "Diversos",
                 "value": "4",
-                "color": "primary"
+                "status": "opened"
             }
         ],
         "totalSales": [
@@ -67,33 +67,30 @@
         ],
         "financialSecurities": [
             {
-                "title": "R$3.105,00",
-                "subtitle": "Vencidos",
-                "value": 1,
-                "color": "danger"
+                "total": "3105.00",
+                "quantity": 1,
+                "status":"expired"
             },
             {
-                "title": "R$2.000,00",
-                "subtitle": "A Vencer",
-                "value": 2,
-                "color": "warning"
+                "total": "2000.00",
+                "quantity": 2,
+                "status":"toexpire"
             },
             {
-                "title": "R$30.000,00",
-                "subtitle": "Pagos",
-                "value": 3,
-                "color": "success"
+                "total": "30000.00",
+                "quantity": 3,
+                "status":"paid"
             }
         ],
         
         "limitCredit": {
             "limitGranted": {
-                "value": "2221212",
+                "value": "123456.00",
                 "description": "Limite Concedito",
-                "color": "primary"
+                "status": "primary"
             },
             "limitAvailable": {
-                "value": "2221212",
+                "value": "30000.00",
                 "description": "Limite Disponivel",
                 "color": "success"
             }

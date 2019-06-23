@@ -5,19 +5,12 @@ import './Timeline.css'
 
 
 
-export default class Timeline extends Component {
-    constructor(props){
-        super(props)
-        this.state = {...props}
-    }
-
-    render(){
-        return (
-            <div>
-                <ul className="timeline">
-                    {chindrenWithProps(this.props)}
-                </ul>            
-            </div>
-        )
-    }
+export default props =>{
+    return (
+        <div>
+            <ul className="timeline">
+                {chindrenWithProps(props)}
+            </ul>            
+        </div>
+    )
 }

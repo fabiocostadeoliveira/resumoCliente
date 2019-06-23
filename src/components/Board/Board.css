@@ -35,5 +35,9 @@
     box-shadow: .05vw 1px 10px #a3aaaa; 
     border: none;
     border-top: none;
-    //background-color: green;
+}
+
+.title-board {
+    font-weight: bold;
+    font-size: 15px;    
 }
