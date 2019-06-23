@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import './SummaryClient.css'
-import Board from '../Board/Board'
 import ProfileBoard from '../ProfileBoard/ProfileBoard'
 import AddressMaps from '../AddressMaps/AddressMaps'
 import OpportunityClient from '../OpportunityClient/OpportunityClient'
@@ -38,7 +37,7 @@ export default class SummaryClient extends Component {
         
         return (
             
-            <div className="containter-geral">
+            <div className="containter-summaryClient">
                 
                 <div className="grid-boards pr-2">
                         <ProfileBoard {...profile}></ProfileBoard>

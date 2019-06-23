@@ -2,9 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './components/GenericUI/IconsFa'
 import './index.css';
+import './components/Board/Board.css'
 import './includes/bootstrap'
 import SummaryClient from './components/SummaryClient/SummaryClient'
 import * as serviceWorker from './serviceWorker';
+
 
 
 ReactDOM.render(

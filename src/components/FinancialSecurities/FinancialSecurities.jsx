@@ -1,7 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
 import './FinancialSecurities.css'
 import BadgeDetail from '../BadgeDatail/BadgeDetail'
-import Util, { currencyFormat } from '../../util/Util'
+import { currencyFormat } from '../../util/Util'
 
 
 const cfgStatus ={

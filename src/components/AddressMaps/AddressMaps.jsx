@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import IconLabelDetail from '../IconLabelDetail/IconLabelDetail'
-import { Map, GoogleApiWrapper, InfoWindow, Marker } from 'google-maps-react';
+import { Map, GoogleApiWrapper, Marker } from 'google-maps-react';
 import './AddressMaps.css'
 
 const mapStyles = {
@@ -8,12 +8,7 @@ const mapStyles = {
     height: '140px'    
 };
 
-export class MapContainer extends Component {
-
-    constructor(props){
-        super(props)
-    }
-
+export class AddressMaps extends Component {
     render() {
       return (
         <div className="container-board">
@@ -45,4 +40,4 @@ export class MapContainer extends Component {
 
 export default GoogleApiWrapper({
     apiKey: 'AIzaSyCK1GUu4HlpeUZQfeC5B3O_ALBEuuD76fo'
-})(MapContainer);
+})(AddressMaps);

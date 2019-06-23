@@ -1,6 +1,13 @@
 
-@media only screen and (max-width: 999px) {
-    .containter-geral{
+@media only screen and (min-width: 730px) {
+    .containter-summaryClient{
+        display: grid;
+        grid-template-columns: repeat(2,50%);        
+    }
+}    
+
+@media only screen and (min-width: 999px) {
+    .containter-summaryClient{
         display: flex;
         flex-direction: column;
     }
@@ -11,7 +18,7 @@
 }    
 
 @media only screen and (min-width: 1000px) {
-    .containter-geral{
+    .containter-summaryClient{
         display: grid;
         grid-template-columns: repeat(2,50%);        
     }

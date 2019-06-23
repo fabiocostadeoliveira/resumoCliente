@@ -1,9 +1,6 @@
-import React, { Component } from 'react'
-import TimelineItem from '../../components/Timeline/TimelineItem'
+import React from 'react'
 import { chindrenWithProps } from '../../util/Util'
 import './Timeline.css'
-
-
 
 export default props =>{
     return (

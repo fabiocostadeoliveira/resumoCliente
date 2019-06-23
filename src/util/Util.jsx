@@ -11,7 +11,7 @@ export function chindrenWithProps(props){
 export function currencyFormat(value,stringToFloat=false){
     let valueAux = value
     let ret = ''
-    console.log('typeOf currency',typeof(parseFloat(value)))
+
     try {
         if ((stringToFloat) && (typeof(valueAux) != Number)) {
             valueAux = parseFloat(valueAux)

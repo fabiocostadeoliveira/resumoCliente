@@ -1,4 +1,4 @@
-import React, { Component }from 'react'
+import React from 'react'
 import {chindrenWithProps} from '../../util/Util'
 import './TimelineItem.css'
 

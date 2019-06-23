@@ -128,7 +128,7 @@ export default class Activities extends Component {
 
     render(){
         /** Totalizers **/
-        let activitiesFromDB = this.groupByStatus(this.state.data) || []
+        let activitiesFromDB = this.state.data ? this.groupByStatus(this.state.data) : []
         objTotalizers.forEach( (item) => this.fillTotalizers(item,activitiesFromDB))
         let elmentsTotalizers = objTotalizers.map(this.makeTotalizers)
 

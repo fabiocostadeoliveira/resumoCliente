@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ReactMinimalPieChart from 'react-minimal-pie-chart'
 import './SalesChart.css'
 
@@ -34,9 +34,10 @@ export default props => {
     }
     
     const formatLabelChart = ({ data, dataIndex }) => {
-        return data[dataIndex].title + 
-                ' - '                 + 
-                data[dataIndex].value.toLocaleString("pt-BR",{style:"currency", currency:"BRL"}) 
+        return data[dataIndex].title                    + 
+                ' '                                     + 
+                data[dataIndex].percentage.toFixed(2)   + 
+                '%'
     }
     
     let list = props.data ? props.data.map(transformDataToDataChart) : []
@@ -53,7 +54,7 @@ export default props => {
             animationDuration={1000}
             label={formatLabelChart}
             labelStyle={{
-                fontSize: '5px',
+                fontSize: '7px',
                 fontFamily: 'sans-serif',
                 fill: '#121212'
             }}

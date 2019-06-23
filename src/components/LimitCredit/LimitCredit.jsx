@@ -1,6 +1,6 @@
-import React, { Component } from 'react'
+import React from 'react'
 import LabelDetail from '../LabelDetail/LabelDetail'
-import Util, { currencyFormat } from '../../util/Util'
+import { currencyFormat } from '../../util/Util'
 import './LimitCredit.css'
 
 const limitDefault = {
