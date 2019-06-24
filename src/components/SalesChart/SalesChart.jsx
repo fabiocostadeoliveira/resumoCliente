@@ -48,6 +48,7 @@ export default props => {
         <div className="container-board">
             <span className="title-board">Mais vendidos</span>
             <ReactMinimalPieChart
+            labelPosition={80}
             style={{height:'90%'}}
             data={listChart}                
             animate

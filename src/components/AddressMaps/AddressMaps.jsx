@@ -39,5 +39,5 @@ export class AddressMaps extends Component {
   }
 
 export default GoogleApiWrapper({
-    apiKey: 'AIzaSyCK1GUu4HlpeUZQfeC5B3O_ALBEuuD76fo'
+    apiKey: 'AIzaSyAbRPyiXBXNZOKHWb__hVMG3LHntyB9ZVY'
 })(AddressMaps);
