@@ -17,12 +17,16 @@ Executa o executor de testes no modo interativo<br>
 
 Faz o build da aplicação na pasta `build`.
 
-### `start.sh`
+### `start.sh`(Ambiente linux)
 O script é uma junção do `npm start` com o `json-server --watch.`<br>
 Esse comando ira iniciar a aplicação com o Mock de dados na porta 3004.<br>
 Para mudança da porta do `json-server`, editar o script que esta na raiz <br>
 do projeto.<br>
 
+### Ambiente Windows
+Executar os seguintes comandos:
+* npm start
+* json-server --watch ./database/db.json --port 3004
 
 
 ## Bibliotecas/Frameworks utilizados

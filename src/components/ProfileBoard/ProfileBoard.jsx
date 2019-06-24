@@ -1,4 +1,5 @@
 import React from 'react'
+import '../GenericUI/IconsFa'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import IconLabelDetail from '../IconLabelDetail/IconLabelDetail'
 import './ProfileBoard.css'

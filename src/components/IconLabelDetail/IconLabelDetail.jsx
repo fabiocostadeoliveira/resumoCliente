@@ -12,14 +12,14 @@ export default props => {
         detailClassName = 'container icon-label-detail'
     }
 
-    let image = props.icon ? props.icon.icon : false
+    let image = props.icon ? props.icon.icon : ''
     let typeColor = props.typeColor ? 'text-' + props.typeColor  : ''
     let paramsFontAwesome = {icon:image}
     let containerStyle = props.containerStyle || ''
     
     return(        
         <div className={`d-flex ml-1 align-items-center ${containerStyle}`}>
-            <If test={image !== false}>
+            <If test={image !== ''}>
                 <div>
                     <FontAwesomeIcon className={typeColor} {...paramsFontAwesome} />
                 </div>
